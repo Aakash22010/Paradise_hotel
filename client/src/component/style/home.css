@@ -1,0 +1,347 @@
+/* From Uiverse.io by Li-Deheng */ 
+.btn-conteiner {
+  display: flex;
+  justify-content: center;
+  --color-text: #ffffff;
+  --color-background: #256dd8e4;
+  --color-outline: #0b5ed7;
+  --color-shadow: #00000080;
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  padding: 5px 30px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: 1s;
+  border-radius: 100px;
+  box-shadow: 0 0 0.2em 0 var(--color-background);
+}
+
+.btn-content:hover, .btn-content:focus {
+  transition: 0.5s;
+  -webkit-animation: btn-content 1s;
+  animation: btn-content 1s;
+  outline: 0.1em solid transparent;
+  outline-offset: 0.2em;
+  box-shadow: 0 0 0.4em 0 var(--color-background);
+}
+
+.btn-content .icon-arrow {
+  transition: 0.5s;
+  margin-right: 0px;
+  transform: scale(0.6);
+}
+
+.btn-content:hover .icon-arrow {
+  transition: 0.5s;
+  margin-right: 25px;
+}
+
+.icon-arrow {
+  width: 20px;
+  margin-left: 15px;
+  position: relative;
+  top: 6%;
+}
+  
+/* SVG */
+#arrow-icon-one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+#arrow-icon-two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.btn-content:hover #arrow-icon-three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.btn-content:hover #arrow-icon-one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.btn-content:hover #arrow-icon-two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: var(--color-background);
+  }
+
+  100% {
+    fill: white;
+  }
+}
+
+/* Button animations */
+@-webkit-keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+
+@keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+
+/* Landing animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Scroll animations */
+[data-aos] {
+    transition-property: transform, opacity;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Additional hover effects for better interactivity */
+.card.hover-shadow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease;
+}
+
+.custom-explore-button {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0 auto;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  background-color: rgb(249 250 251);
+  backdrop-filter: blur(12px);
+  font-weight: 600;
+  isolation: isolate;
+  border: 2px solid rgb(249 250 251);
+  position: relative;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  overflow: hidden;
+  border-radius: 9999px;
+}
+
+.custom-explore-button::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  transition: all 1s;
+  left: -100%;
+  border-radius: 9999px;
+  background-color: #0DCAF0;
+  z-index: -1;
+  aspect-ratio: 1/1;
+}
+
+.custom-explore-button:hover::before {
+  width: 100%;
+  left: 0;
+  transform: scale(1.5);
+  transition-duration: 1s;
+}
+
+.custom-explore-button:hover {
+  color: rgb(249 250 251);
+}
+
+.custom-explore-icon {
+  width: 2rem;
+  height: 2rem;
+  justify-content: end;
+  color: rgb(249 250 251);
+  transition: all 0.3s ease;
+  border-radius: 9999px;
+  border: 1px solid rgb(55 65 81);
+  padding: 0.5rem;
+  transform: rotate(45deg);
+}
+
+.custom-explore-button:hover .custom-explore-icon {
+  transform: rotate(90deg);
+  background-color: rgb(249 250 251);
+  border: none;
+}
+
+.custom-explore-icon-path {
+  fill: rgb(31 41 55);
+}
+
+.custom-explore-button:hover .custom-explore-icon-path {
+  fill: rgb(31 41 55);
+}
+
+
+
+
+
+
+
+
+
+.custom-view-button {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0 auto;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  background-color: rgb(249 250 251);
+  backdrop-filter: blur(12px);
+  font-weight: 600;
+  isolation: isolate;
+  border: 2px solid rgb(249 250 251);
+  position: relative;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  overflow: hidden;
+  border-radius: 9999px;
+}
+
+.custom-view-button::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  transition: all 0.7s;
+  left: -100%;
+  border-radius: 9999px;
+  background-color: #198754;
+  z-index: -1;
+  aspect-ratio: 1/1;
+}
+
+.custom-view-button:hover::before {
+  width: 100%;
+  left: 0;
+  transform: scale(1.5);
+  transition-duration: 0.7s;
+}
+
+.custom-view-button:hover {
+  color: rgb(249 250 251);
+}
+
+.custom-view-icon {
+  width: 2rem;
+  height: 2rem;
+  justify-content: end;
+  color: rgb(249 250 251);
+  transition: all 0.3s ease;
+  border-radius: 9999px;
+  border: 1px solid rgb(55 65 81);
+  padding: 0.5rem;
+  transform: rotate(45deg);
+}
+
+.custom-view-button:hover .custom-view-icon {
+  transform: rotate(90deg);
+  background-color: rgb(249 250 251);
+  border: none;
+}
+
+.custom-view-icon-path {
+  fill: rgb(31 41 55);
+}
+
+.custom-view-button:hover .custom-view-icon-path {
+  fill: rgb(31 41 55);
+}
+
+.custom-offer-button {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0 auto;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  background-color: rgb(249 250 251);
+  backdrop-filter: blur(12px);
+  font-weight: 600;
+  isolation: isolate;
+  border: 2px solid rgb(249 250 251);
+  position: relative;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  overflow: hidden;
+  border-radius: 9999px;
+}
+
+.custom-offer-button::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  transition: all 0.7s;
+  left: -100%;
+  border-radius: 9999px;
+  background-color: #FFC107;
+  z-index: -1;
+  aspect-ratio: 1/1;
+}
+
+.custom-offer-button:hover::before {
+  width: 100%;
+  left: 0;
+  transform: scale(1.5);
+  transition-duration: 0.7s;
+}
+
+.custom-offer-button:hover {
+  color: rgb(249 250 251);
+}
+
+.custom-offer-icon {
+  width: 2rem;
+  height: 2rem;
+  justify-content: end;
+  color: rgb(249 250 251);
+  transition: all 0.3s ease;
+  border-radius: 9999px;
+  border: 1px solid rgb(55 65 81);
+  padding: 0.5rem;
+  transform: rotate(45deg);
+}
+
+.custom-offer-button:hover .custom-offer-icon {
+  transform: rotate(90deg);
+  background-color: rgb(249 250 251);
+  border: none;
+}
+
+.custom-offer-icon-path {
+  fill: rgb(31 41 55);
+}
+
+.custom-offer-button:hover .custom-offer-icon-path {
+  fill: rgb(31 41 55);
+}
