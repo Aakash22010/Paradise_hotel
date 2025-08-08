@@ -14,7 +14,7 @@ const adminRoutes = require('./routes/adminRoutes');
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:5173', 
+  origin: 'https://paradise-hotel-peach.vercel.app', 
   credentials: true
 }));
 
