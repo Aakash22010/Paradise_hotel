@@ -11,7 +11,7 @@ const HotelList = () => {
 
   const fetchHotels = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/hotels', {
+      const res = await axios.get('https://paradise-backend-fkix.onrender.com/api/hotels', {
         params: { city, stars, search, page, limit: 6 }
       });
       setHotels(res.data.hotels);

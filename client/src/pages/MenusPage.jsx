@@ -6,7 +6,7 @@ const MenusPage = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/data?category=Menus')
+    fetch('https://paradise-backend-fkix.onrender.com/api/data?category=Menus')
       .then(res => res.json())
       .then(setItems);
   }, []);

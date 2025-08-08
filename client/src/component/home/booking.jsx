@@ -24,7 +24,7 @@ const BookingModal = ({ isOpen, closeModal }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/bookings', form);
+      const response = await axios.post('https://paradise-backend-fkix.onrender.com/api/bookings', form);
       const { order } = response.data;
 
       const options = {

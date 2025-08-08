@@ -28,7 +28,7 @@ const DynamicDataPage = () => {
   useEffect(() => {
     if (!category) return;
 
-    fetch(`http://localhost:5000/api/data/${category}`)
+    fetch(`https://paradise-backend-fkix.onrender.com/api/data/${category}`)
       .then((res) => res.json())
       .then((res) => {
         setData(res);

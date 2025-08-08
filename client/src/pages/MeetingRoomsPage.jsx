@@ -6,7 +6,7 @@ const MeetingRoomsPage = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/data?category=Meeting Rooms')
+    fetch('https://paradise-backend-fkix.onrender.com/api/data?category=Meeting Rooms')
       .then(res => res.json())
       .then(setItems);
   }, []);

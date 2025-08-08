@@ -50,7 +50,7 @@ const Form = () => {
     setSubmitStatus(null);
 
     try {
-      const API_URL = 'http://localhost:5000/api/contact';
+      const API_URL = 'https://paradise-backend-fkix.onrender.com/api/contact';
 
       const response = await fetch(API_URL, {
         method: 'POST',

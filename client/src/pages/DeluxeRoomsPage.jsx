@@ -7,7 +7,7 @@ const DeluxeRoomsPage = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch(`http://localhost:5000/api/data?category=Deluxe Rooms`);
+      const res = await fetch(`https://paradise-backend-fkix.onrender.com/api/data?category=Deluxe Rooms`);
       const data = await res.json();
       setItems(data);
     };

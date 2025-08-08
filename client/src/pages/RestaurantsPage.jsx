@@ -6,7 +6,7 @@ const RestaurantsPage = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/data?category=Restaurants Bars')
+    fetch('https://paradise-backend-fkix.onrender.com/api/data?category=Restaurants Bars')
       .then(res => res.json())
       .then(setItems);
   }, []);

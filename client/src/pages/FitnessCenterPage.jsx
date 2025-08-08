@@ -6,7 +6,7 @@ const FitnessCenterPage = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/data?category=Fitness Center')
+    fetch('https://paradise-backend-fkix.onrender.com/api/data?category=Fitness Center')
       .then(res => res.json())
       .then(setItems);
   }, []);

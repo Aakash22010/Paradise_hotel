@@ -21,7 +21,7 @@ const Feedback = () => {
     const handleSubmit = async (e) => {
         e.preventDefault(); // ✅ Prevent default form submission
         try {
-            await axios.post('http://localhost:5000/api/feedback', formData);
+            await axios.post('https://paradise-backend-fkix.onrender.com/api/feedback', formData);
             setSuccessMessage('Feedback submitted successfully!');
             setFormData({ name: '', location: '', feedback: '' });
         } catch (error) {

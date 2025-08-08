@@ -6,7 +6,7 @@ const SwimmingPoolPage = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/data?category=Swimming Pool')
+    fetch('https://paradise-backend-fkix.onrender.com/api/data?category=Swimming Pool')
       .then(res => res.json())
       .then(setItems);
   }, []);

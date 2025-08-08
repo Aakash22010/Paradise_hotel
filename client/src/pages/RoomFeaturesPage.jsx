@@ -6,7 +6,7 @@ const RoomFeaturesPage = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/data?category=Room Features')
+    fetch('https://paradise-backend-fkix.onrender.com/api/data?category=Room Features')
       .then(res => res.json())
       .then(setItems);
   }, []);

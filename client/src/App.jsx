@@ -50,7 +50,7 @@ function App() {
 
   useEffect(() => {
     // Simulated fetch call to backend
-    fetch('http://localhost:5000/', {
+    fetch('https://paradise-backend-fkix.onrender.com/', {
       credentials: 'include',
     })
       .then(res => res.json())

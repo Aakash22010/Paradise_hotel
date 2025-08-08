@@ -8,7 +8,7 @@ const Offers = () => {
 
   const fetchOffers = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/offers');
+      const res = await axios.get('https://paradise-backend-fkix.onrender.com/api/offers');
       setOffers(res.data);
     } catch (error) {
       console.error('Failed to fetch offers:', error);

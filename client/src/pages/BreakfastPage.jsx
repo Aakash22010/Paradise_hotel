@@ -6,7 +6,7 @@ const BreakfastPage = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/data?category=Breakfast')
+    fetch('https://paradise-backend-fkix.onrender.com/api/data?category=Breakfast')
       .then(res => res.json())
       .then(setItems);
   }, []);

@@ -6,7 +6,7 @@ const SpaWellnessPage = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/data?category=Spa Wellness')
+    fetch('https://paradise-backend-fkix.onrender.com/api/data?category=Spa Wellness')
       .then(res => res.json())
       .then(setItems);
   }, []);
