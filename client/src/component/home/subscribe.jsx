@@ -19,7 +19,7 @@ const UserLogin = () => {
 
     setIsChecking(true);
     try {
-      const res = await axios.post("/api/check-email", { email });
+      const res = await axios.post("https://paradise-backend-fkix.onrender.com/api/check-email", { email });
       return res.data.exists;
     } catch (error) {
       console.error("Email check error:", error);
@@ -56,7 +56,7 @@ const UserLogin = () => {
       }
 
       // If not registered, send OTP
-      const res = await axios.post("/api/send-otp", { email });
+      const res = await axios.post("https://paradise-backend-fkix.onrender.com/api/send-otp", { email });
 
       if (res.data.success) {
         setOtpSent(true);
@@ -83,7 +83,7 @@ const UserLogin = () => {
     setMessage("");
 
     try {
-      const res = await axios.post("/api/verify-otp", { email, otp });
+      const res = await axios.post("https://paradise-backend-fkix.onrender.com/api/verify-otp", { email, otp });
 
       if (res.data.success) {
         setVerified(true);
